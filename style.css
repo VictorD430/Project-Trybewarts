@@ -23,7 +23,7 @@ body {
   height: 130px;
 }
 
-.trybewarts-login input, .trybewarts-login button {
+.trybewarts-login input , .trybewarts-login button {
   height: 50px;
   border-radius: 15px;
   margin-left: 10px;
@@ -35,14 +35,11 @@ body {
 
 .trybewarts-login {
   display: flex;
-  /* justify-content: flex-end; */
   align-items: center;
-
 }
 
-#email, #senha {
+#email , #senha {
   display: flex;
-  
 }
 
 #trybewarts-header-title {
@@ -50,4 +47,18 @@ body {
   align-self: center;
   font-size: 50px;
   color: white;
+}
+
+main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
 }
