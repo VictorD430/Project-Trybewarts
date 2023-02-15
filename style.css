@@ -13,7 +13,6 @@ body {
   text-align: center;
   height: 150px;
   margin-bottom: 40px;
-  margin-bottom: 1px solid;
   width: 100%;
   justify-content: space-between;
 }
@@ -51,9 +50,11 @@ body {
 
 main {
   display: flex;
+  background-color: aquamarine;
 }
 
 #evaluation-form {
+  background-color: aqua;
   display: flex;
   width: 675px;
   flex-direction: column;
@@ -63,9 +64,10 @@ main {
   height: 500px;
 }
 
-#evaluation-form section {
+#form1 {
   display: flex;
   flex-flow: row wrap;
+  background-color: bisque;
 }
 
 #input-name {
@@ -93,10 +95,99 @@ main {
   margin-bottom: 5px;
 }
 
+#casa {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 250px;
+  height: 100px;
+  order: 4;
+  margin-left: 10px;
+}
+
 #house {
   display: flex;
   width: 250px;
   height: 100px;
   order: 4;
   margin-left: 10px;
+}
+
+/* parte 2 do formulário */
+#form2 {
+  display: block;
+  /* flex-flow: row wrap; */
+
+}
+
+#label-family {
+  height: 15px; 
+  width: 250px;
+}
+
+#frontend {
+  height: 15px;
+  width: 10px;
+}
+
+#backend {
+  height: 15px;
+  width: 10px;
+}
+
+#fullStack {
+  height: 15px;
+  width: 10px;
+}
+
+#label-content {
+  height: 15px;
+  width: 10px;
+}
+
+#hof {
+  height: 15px;
+  width: 10px;
+}
+
+#jes {
+  height: 15px;
+  width: 10px;
+}
+
+#pro {
+  height: 15px;
+  width: 10px;
+}
+
+#rea {
+  height: 15px;
+  width: 10px;
+}
+
+#sql {
+  height: 15px;
+  width: 10px;
+}
+
+#pyt {
+  height: 15px;
+  width: 10px;
+}
+
+#form3 {
+  display: block;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#form4 {
+  display: block;
+}
+
+#submit-btn {
+  display: flex;
+  width: 175px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
