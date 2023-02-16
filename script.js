@@ -11,8 +11,9 @@ const nome = document.getElementById('input-name');
 const lastName = document.getElementById('input-lastname');
 const emailForm = document.getElementById('input-email');
 const house = document.getElementById('house');
-const family = document.getElementById('form2-2-1');
-const materia = document.getElementsByClassName('subject');
+const family = document.querySelectorAll('input[name="family"]');
+const materia = document.querySelectorAll('input[name="subject"]');
+const nota = document.querySelectorAll('input[name="rate"]');
 
 const validaLogin = () => {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
@@ -36,13 +37,34 @@ textarea.addEventListener('input', () => {
 });
 
 const selectedFamily = () => {
+  let escolhida = '';
   for (let index = 0; index < family.length; index += 1) {
     if (family[index].checked) {
-      const escolhida = family[index].value;
-      console.log(escolhida);
-      return escolhida;
+      escolhida = family[index].value;
     }
   }
+  return escolhida;
+};
+
+const checkedMaterias = () => {
+  const escolhida = [];
+  for (let index = 0; index < materia.length; index += 1) {
+    if (materia[index].checked) {
+      escolhida.push(materia[index].value);
+    }
+    console.log(escolhida);
+  }
+  return escolhida.join(', ');
+};
+
+const selectedNota = () => {
+  let escolhida = '';
+  for (let index = 0; index < nota.length; index += 1) {
+    if (nota[index].checked) {
+      escolhida = nota[index].value;
+    }
+  }
+  return escolhida;
 };
 
 const formInscrito = (event) => {
@@ -51,8 +73,10 @@ const formInscrito = (event) => {
   formData.innerText = `Nome: ${nome.value} ${lastName.value}
   \nEmail: ${emailForm.value}
   \nCasa: ${house.value}
-  \n${selectedFamily()}
-  \n${materia.value}`;
+  \nFamília: ${selectedFamily()}
+  \nMatérias: ${checkedMaterias()}
+  \nAvaliação: ${selectedNota()}
+  \nObservações: ${textarea.value}`;
 };
 
 btnSubmit.addEventListener('click', formInscrito);

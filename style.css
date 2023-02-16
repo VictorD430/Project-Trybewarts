@@ -107,7 +107,7 @@ main {
 #house {
   display: flex;
   order: 4;
-  width: 230px!important;
+  width: 230px;
   margin-left: 10px;
 }
 
