@@ -116,12 +116,11 @@ main {
 /* parte 2 do formulário */
 #form2 {
   display: block;
-  /* flex-flow: row wrap; */
-
+/* flex-flow: row wrap; */
 }
 
 #label-family {
-  height: 15px; 
+  height: 15px;
   width: 250px;
 }
 
@@ -185,9 +184,15 @@ main {
   display: block;
 }
 
+#textearea {
+  width: 450px;
+  height: 200px;
+}
+
 #submit-btn {
   display: flex;
   width: 175px;
   margin-left: 30%;
   margin-right: 30%;
 }
+

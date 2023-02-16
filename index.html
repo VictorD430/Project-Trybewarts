@@ -14,7 +14,7 @@
     <form action="" class="trybewarts-login">
       <input type="email" name="email" placeholder="Email" id="email">
       <input type="password" name="password" placeholder="Senha" id="senha">
-      <button id="btn-submit">Entrar</button>
+      <button id="btn-login">Entrar</button>
     </form>
   </header>
   <main>
@@ -33,14 +33,13 @@
         </label>
       </section>
       <section id="form2">
-        <label id="label-family">Qual sua família?
+        <label id="label-family">Qual sua família?</label>
           <input type="radio" name="family" value="Frontend" id="frontend"> Família Frontend
           <!-- <label for="frontend">Família Frontend</label> -->
           <input type="radio" name="family" value="Backend" id="backend"> Família Backend
           <!-- <label for="backend">Família Backend</label> -->
           <input type="radio" name="family" value="FullStack" id="fullStack"> Família FullStack
           <!-- <label for="fullStack">Família FullStack</label> -->
-        </label>
         <label id="label-content">Qual conteúdo você está com mais vontade de aprender?
           <input type="checkbox" name="subject" value="HoFs" class="subject" id="hof"> HoFs
           <input type="checkbox" name="subject" value="Jest" class="subject" id="jes"> Jest
@@ -69,17 +68,18 @@
       <section id="form4">
         <label for="" class="textarea"> Deixe seu comentário:</label>
         <br>
-        <textarea name="" id="" cols="30" rows="10" maxlength="500"></textarea>
+        <textarea name="" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
+        <div id="counter"></div>
         <br>
-        <label for="" id="label-infos">Você concorda com o uso das informações acima?</label>
-        <input type="checkbox" name="" id="agreement">
+        <label id="label-infos" name="agree">Você concorda com o uso das informações acima?</label>
+        <input type="checkbox" name="agree" id="agreement">
       </section>
-      <button type="submit" id="submit-btn">Enviar</button>
+      <button type="submit" id="submit-btn" disabled>Enviar</button>
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="trybewarts-colored">
   </main>
   <footer>
-
+    Direitos reservados à Trybewarts©
   </footer>
   <script src="script.js"></script>
 </body>
