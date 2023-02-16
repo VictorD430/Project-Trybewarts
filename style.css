@@ -116,7 +116,6 @@ main {
 /* parte 2 do formulário */
 #form2 {
   display: block;
-/* flex-flow: row wrap; */
 }
 
 #label-family {
@@ -195,4 +194,3 @@ main {
   margin-left: 30%;
   margin-right: 30%;
 }
-
