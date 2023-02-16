@@ -5,6 +5,14 @@ const btnSubmit = document.getElementById('submit-btn');
 const agree = document.getElementById('agreement');
 const textarea = document.getElementById('textarea');
 const contadorPRO = document.getElementById('counter');
+const formData = document.getElementById('form-data');
+const formGeral = document.getElementById('evaluation-form');
+const nome = document.getElementById('input-name');
+const lastName = document.getElementById('input-lastname');
+const emailForm = document.getElementById('input-email');
+const house = document.getElementById('house');
+const family = document.getElementById('form2-2-1');
+const materia = document.getElementsByClassName('subject');
 
 const validaLogin = () => {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
@@ -21,11 +29,30 @@ const validaForm = () => {
 };
 agree.addEventListener('change', validaForm);
 
-function conta() {
-  const inputLength = textarea.value.length;
-  const maxChars = 499;
-  const contagem = maxChars - inputLength;
-  contadorPRO.innerHTML = `${contagem}/500`;
-}
+textarea.addEventListener('input', () => {
+  let counter = 500;
+  counter -= (textarea.value.length);
+  contadorPRO.innerText = counter;
+});
 
-textarea.addEventListener('keypress', conta);
+const selectedFamily = () => {
+  for (let index = 0; index < family.length; index += 1) {
+    if (family[index].checked) {
+      const escolhida = family[index].value;
+      console.log(escolhida);
+      return escolhida;
+    }
+  }
+};
+
+const formInscrito = (event) => {
+  event.preventDefault();
+  formGeral.style.display = 'none';
+  formData.innerText = `Nome: ${nome.value} ${lastName.value}
+  \nEmail: ${emailForm.value}
+  \nCasa: ${house.value}
+  \n${selectedFamily()}
+  \n${materia.value}`;
+};
+
+btnSubmit.addEventListener('click', formInscrito);

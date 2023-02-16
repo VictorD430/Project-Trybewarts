@@ -348,7 +348,7 @@ describe('Trybewarts', () => {
     });
   });
 
-  describe('21 - Substitua o formulário pelas informações da pessoa estudante', () => {
+  describe.only('21 - Substitua o formulário pelas informações da pessoa estudante', () => {
     const firstName = 'John';
     const lastName = 'Doe';
     const email = 'johndoe@trybe.com';

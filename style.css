@@ -50,14 +50,21 @@ body {
 
 main {
   display: flex;
-  background-color: aquamarine;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 #evaluation-form {
-  background-color: aqua;
   display: flex;
   width: 675px;
+  padding-left: 15px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #trybewarts-forms-logo {
@@ -67,31 +74,25 @@ main {
 #form1 {
   display: flex;
   flex-flow: row wrap;
-  background-color: bisque;
+}
+
+#form1 input , #form1 select {
+  width: 250px;
+  padding: 2%;
+  margin-bottom: 10px;
 }
 
 #input-name {
-  display: flex;
   order: 1;
-  width: 250px;
-  height: 100px;
-  margin-bottom: 5px;
 }
 
 #input-lastname {
-  display: flex;
   order: 2;
-  width: 250px;
-  height: 100px;
-  margin-bottom: 5px;
   margin-left: 10px;
 }
 
 #input-email {
-  display: flex;
   order: 3;
-  width: 250px;
-  height: 100px;
   margin-bottom: 5px;
 }
 
@@ -99,98 +100,93 @@ main {
   display: flex;
   align-self: center;
   justify-content: center;
-  width: 250px;
-  height: 100px;
   order: 4;
   margin-left: 10px;
 }
 
 #house {
   display: flex;
-  width: 250px;
-  height: 100px;
   order: 4;
+  width: 230px!important;
   margin-left: 10px;
 }
 
 /* parte 2 do formulário */
 #form2 {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-#label-family {
-  height: 15px;
-  width: 250px;
+#form2-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
+  list-style: none;
+  justify-content: space-between;
 }
 
-#frontend {
-  height: 15px;
-  width: 10px;
+#form2-2-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  order: 1;
+  list-style: none;
 }
 
-#backend {
-  height: 15px;
-  width: 10px;
+#form2-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
+  margin-left: 20px;
+  list-style: none;
+  justify-content: space-between;
 }
 
-#fullStack {
-  height: 15px;
-  width: 10px;
+#form2-3-1 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 10px;
+  order: 1;
+  list-style: none;
 }
 
-#label-content {
-  height: 15px;
-  width: 10px;
-}
-
-#hof {
-  height: 15px;
-  width: 10px;
-}
-
-#jes {
-  height: 15px;
-  width: 10px;
-}
-
-#pro {
-  height: 15px;
-  width: 10px;
-}
-
-#rea {
-  height: 15px;
-  width: 10px;
-}
-
-#sql {
-  height: 15px;
-  width: 10px;
-}
-
-#pyt {
-  height: 15px;
-  width: 10px;
+.subject {
+  width: 20%;
 }
 
 #form3 {
-  display: block;
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 #form4 {
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 #textearea {
+  margin-top: 10px;
   width: 450px;
   height: 200px;
 }
 
 #submit-btn {
-  display: flex;
-  width: 175px;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 100px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#submit-btn:disabled {
+  cursor: not-allowed;
 }
