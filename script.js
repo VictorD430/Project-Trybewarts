@@ -21,9 +21,11 @@ const validaForm = () => {
 };
 agree.addEventListener('change', validaForm);
 
-textarea.addEventListener('keypress', function(e) {
+function conta() {
   const inputLength = textarea.value.length;
   const maxChars = 499;
-  let contagem = maxChars - inputLength;
-  contadorPRO.innerHTML = contagem + '/500';
-});
+  const contagem = maxChars - inputLength;
+  contadorPRO.innerHTML = `${contagem}/500`;
+}
+
+textarea.addEventListener('keypress', conta);
